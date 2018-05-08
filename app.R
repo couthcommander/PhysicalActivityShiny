@@ -1,5 +1,5 @@
-library(shiny)
 library(PhysicalActivity)
+library(shiny)
 
 ui <- fluidPage(
   titlePanel("App for Actigraph Plot and the Summary of Daily Wear Time"),
