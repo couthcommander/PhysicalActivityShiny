@@ -1,6 +1,6 @@
 # PhysicalActivityShiny
 
-[Shiny Demo](https://statcomp2.vanderbilt.edu/beckca/agd/)
+[Shiny Demo](https://statcomp2.app.vumc.org/beckca/agd/)
 
 For more information, see:
 
