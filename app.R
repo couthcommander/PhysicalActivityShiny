@@ -5,14 +5,14 @@ load('tzopt.Rdata')
 
 ui <- fluidPage(
   shinyjs::useShinyjs(),
-  titlePanel("App for Actigraph Plot and the Summary of Daily Wear Time"),
+  titlePanel("App for Accelerometer Plot and the Summary of Daily Wear Time"),
   sidebarLayout(
     sidebarPanel(
       actionButton('go', 'Create Output', style = "color: #fff; background-color: #337ab7; border-color: #2e6da4"),
       h4("Uploading File"),
       fileInput('file1', 'Choose AGD/CSV File'),
-      h4("Download Actigraph Plot"),
-      downloadButton('downloadPlot', 'Download Actigraph Plot'),
+      h4("Download Accelerometer Plot"),
+      downloadButton('downloadPlot', 'Download Accelerometer Plot'),
       h4("Download Table"),
       downloadButton('downloadTable', 'Download Table'),
       h4("Options"),
@@ -43,7 +43,7 @@ ui <- fluidPage(
     mainPanel(
       h3("Data Format"),
       textOutput('descriptionData'),
-      h3("Actigraph Plot"),
+      h3("Accelerometer Plot"),
       plotOutput('actigraphPlot'),
       h3("Summary Table of Daily Wear Time"),
       textOutput('descriptionTable'),
@@ -127,7 +127,7 @@ server <- function(input, output) {
   }
 
   output$descriptionData <- renderText({
-    "The data file must be an AGD or CSV file."
+    "The data file must be an AGD (Actigraph) or CSV file."
   })
 
   output$actigraphPlot <- renderPlot({
